@@ -27,7 +27,7 @@ def hello():
     if is_command:
         msg = msg.replace(command, "", 1)
         command_func = COMMAND_WORDS.get(command)
-        return command_func(msg, from_qq).encode('gbk')
+        return command_func(msg, str(from_qq)).encode('gbk')
     return ""
 
 
